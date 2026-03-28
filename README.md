@@ -1,143 +1,83 @@
-# New-1
-New 1
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan - Anggun & Angking</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --gold: #c5a059;
-            --dark-brown: #4a3728;
-            --bg-color: #fdfaf5;
-        }
+Undangan Pernikahan
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--dark-brown);
-            text-align: center;
-        }
+<style>
+    :root {
+        --gold: #b38e44; /* Gold lebih deep agar terlihat mewah */
+        --dark-brown: #2d241e;
+        --bg-color: #faf7f2;
+        --accent: #d4af37;
+    }
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80') center/cover;
-            color: white;
-            padding: 20px;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--dark-brown);
+        text-align: center;
+        line-height: 1.8;
+    }
 
-        h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4rem;
-            margin: 10px 0;
-        }
+    /* Hero Section dengan Efek Parallax Sederhana */
+    .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80') center/cover no-repeat;
+        color: white;
+        padding: 20px;
+        position: relative;
+    }
 
-        h2 {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-        }
+    /* Animasi Halus */
+    .hero h1, .hero h2, .hero p {
+        animation: fadeInUp 1.5s ease;
+    }
 
-        .content-section {
-            padding: 60px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(3rem, 10vw, 5.5rem); /* Ukuran adaptif */
+        margin: 15px 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
 
-        .card {
-            background: white;
-            padding: 40px 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-            border: 1px solid #eee;
-        }
+    h2 {
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 400;
+    }
 
-        .couple-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--gold);
-            margin: 15px 0;
-        }
+    .content-section {
+        padding: 100px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
 
-        .date-box {
-            font-weight: bold;
-            font-size: 1.1rem;
-            border-top: 1px solid var(--gold);
-            border-bottom: 1px solid var(--gold);
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 20px 0;
-        }
+    /* Card Desain Mewah */
+    .card {
+        background: white;
+        padding: 60px 30px;
+        border-radius: 4px; /* Sudut lebih tajam agar terlihat formal */
+        box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(179, 142, 68, 0.2); /* Border gold tipis */
+    }
 
-        .btn {
-            background-color: var(--gold);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
+    /* Ornamen Sudut (Opsional) */
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 10px; left: 10px; right: 10px; bottom: 10px;
+        border: 1px solid rgba(179, 142, 68, 0.1);
+        pointer-events: none;
+    }
 
-        .btn:hover {
-            background-color: var(--dark-brown);
-        }
-
-        footer {
-            padding: 40px;
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }
-    </style>
-</head>
-<body>
-
-    <section class="hero">
-        <h2>The Wedding of</h2>
-        <h1>Anggun & Angking</h1>
-        <p>16 . 08 . 2026</p>
-    </section>
-
-    <section class="content-section">
-        <p><i>Assalamu’alaikum Warahmatullahi Wabarakatuh</i></p>
-        <p>Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Dengan memohon rahmat-Nya, kami bermaksud mengundang Bapak/Ibu/Saudara/i di pernikahan kami:</p>
-        
-        <div class="couple-name">Adea Anggun Novita Sari (Anggun)</div>
-        <p>&</p>
-        <div class="couple-name">Muhamad Hidayatullah (Angking)</div>
-    </section>
-
-    <section class="content-section">
-        <div class="card">
-            <h3>Akad Nikah</h3>
-            <div class="date-box">Jumat, 14 Agustus 2026</div>
-            <p>09.00 - Selesai</p>
-            <p><b>Lokasi:</b> KUA Kec. Dusun Tengah</p>
-        </div>
-
-        <div class="card">
-            <h3>Resepsi</h3>
-            <div class="date-box">Minggu, 16 Agustus 2026</div>
-            <p>08.00 - Selesai</p>
-            <p><b>Lokasi:</b> Samping RM. Kalijo Ampah<br>(Rumah Mempelai Wanita)</p>
-            <a href="https://www.google.com/maps/search/RM.+Kalijo+Ampah" target="_blank" class="btn">Buka Google Maps</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Anggun & Angking Wedding Invitation</p>
-    </footer>
-
-</body>
-</html>
+    .couple-
